@@ -28,5 +28,5 @@ jobs:
           deny-groups: pkg:pip/requests  
       - name: 'Upload results on failure'
         if: failure()
-        run: echo "you're a failure" 
+        run: echo $GITHUB_STEP_SUMMARY
           
