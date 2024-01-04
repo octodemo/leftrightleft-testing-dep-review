@@ -26,3 +26,7 @@ jobs:
           # Use comma-separated names to pass list arguments:
           deny-licenses: LGPL-2.0, BSD-3-Clause
           deny-groups: pkg:pip/requests  
+      - name: 'Upload results on failure'
+        if: failure()
+        run: echo "you're a failure" 
+          
