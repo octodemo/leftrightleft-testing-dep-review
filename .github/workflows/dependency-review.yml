@@ -28,5 +28,10 @@ jobs:
           deny-groups: pkg:pip/requests  
       - name: 'Upload results on failure'
         if: failure()
-        run: env
+        run: | 
+          for file in /home/runner/work/_temp/_runner_file_commands/step_summary_*
+          do
+            echo "Contents of $file:"
+            cat "$file"
+          done
           
